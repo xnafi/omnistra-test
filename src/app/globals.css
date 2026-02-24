@@ -14,6 +14,14 @@
   --font-sans: var(--font-inter), sans-serif;
   --font-navbar: var(--font-helvetica-now), sans-serif;
 }
+@layer utilities {
+  .containerNav {
+    @apply max-w-[1440px] px-4 py-10 mx-auto;
+  }
+  .container {
+    @apply max-w-[72.72rem] px-4 py-10 mx-auto;
+  }
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
