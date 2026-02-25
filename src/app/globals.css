@@ -16,10 +16,19 @@
 }
 @layer utilities {
   .containerNav {
-    @apply max-w-[1440px] px-4 py-10 mx-auto;
+    @apply max-w-[1440px] px-4 py-2 mx-auto;
   }
   .container {
-    @apply max-w-[72.72rem] px-4 py-10 mx-auto;
+    @apply max-w-[72.72rem] px-4 py-2 mx-auto;
+  }
+  .primaryColor{
+    @apply text-[#ffffff]
+  }
+  .secondaryColor{
+    @apply text-[#3448ff]
+  }
+    .accentColor{
+    @apply text-[#aede5b]
   }
 }
 
@@ -34,4 +43,23 @@
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}
+
+.marquee {
+  animation: marquee 40s linear infinite;
+  max-width: 1440px;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
 }
