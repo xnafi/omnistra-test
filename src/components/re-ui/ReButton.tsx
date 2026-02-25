@@ -10,7 +10,7 @@ export function ReButton({
 }: ButtonProps) {
   const primary = "bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 transition-colors duration-500";
 
-  const dark = "glassEffect text-white";
+  const dark = "bg-black text-white hover-glassEffect";
 
   return (
     <Link

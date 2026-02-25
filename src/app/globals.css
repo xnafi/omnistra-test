@@ -86,12 +86,12 @@ body {
 
   .animated-border {
     background: linear-gradient(
-      110deg,
+      120deg,
       transparent 40%,
       rgba(59, 130, 246, 0.4) 45%,
       rgba(59, 130, 246, 0.9) 50%,
       rgba(59, 130, 246, 0.4) 55%,
-      transparent 60%
+      transparent 10%
     );
 
     background-size: 200% 200%;
