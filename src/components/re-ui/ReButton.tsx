@@ -8,9 +8,11 @@ export function ReButton({
   variant = "primary",
   className = "",
 }: ButtonProps) {
-  const primary = "bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 transition-colors duration-500";
+  const primary =
+    "bg-[#3448ff] text-white hover:bg-[#2c3be0] transition-colors duration-300";
 
-  const dark = "bg-black text-white hover-glassEffect";
+  const dark =
+    "bg-gray-900 text-white transition-colors duration-300";
 
   return (
     <Link
@@ -25,6 +27,7 @@ export function ReButton({
     >
       <span
         className={`
+          group
           relative z-10
           px-4 py-2
           rounded-full
@@ -35,8 +38,8 @@ export function ReButton({
       >
         {children}
         <ArrowUpRight
-          size={18}
-          className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+          size={14}
+          className="transition-transform duration-300  group-hover:translate-x-1 group-hover:rotate-45"
         />
       </span>
     </Link>

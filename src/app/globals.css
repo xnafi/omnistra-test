@@ -74,7 +74,8 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* ===== Shiny Button Animation ===== */
+/* ===== Button Animation ===== */
+
    @keyframes border-shine {
     0% {
       background-position: 0% 50%;
