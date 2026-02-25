@@ -30,6 +30,9 @@
     .accentColor{
     @apply text-[#aede5b]
   }
+
+  
+ 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,7 +48,8 @@ body {
   color: var(--foreground);
 }
 
-/* Marquee animation */
+/* ===== marquee ===== */
+
 @keyframes marquee {
   0% {
     transform: translateX(0%);
@@ -63,8 +67,34 @@ body {
   animation-play-state: paused;
 }
 
+/* ===== glass effect ===== */
 .glassEffect {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+/* ===== Shiny Button Animation ===== */
+   @keyframes border-shine {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 200% 50%;
+    }
+  }
+
+  .animated-border {
+    background: linear-gradient(
+      110deg,
+      transparent 40%,
+      rgba(59, 130, 246, 0.4) 45%,
+      rgba(59, 130, 246, 0.9) 50%,
+      rgba(59, 130, 246, 0.4) 55%,
+      transparent 60%
+    );
+
+    background-size: 200% 200%;
+    animation: border-shine 2.5s linear infinite;
+    border-radius: 9999px;
+  }

@@ -2,6 +2,7 @@ import Image from "next/image";
 import logo from "../../../public/assets/logo.webp";
 import Marquee from "../ui/Marquee";
 import Link from "next/link";
+import { ReButton } from "../re-ui/ReButton";
 
 export default function NavBar() {
   return (
@@ -25,10 +26,13 @@ export default function NavBar() {
 
           {/* Desktop Right Side */}
           <div className="hidden lg:flex gap-6 text-sm font-medium">
-            <Link href="/login">Login</Link>
-            <Link href="/pricing" className="font-semibold">
-              Get Started
-            </Link>
+            <ReButton href="/login" variant="dark">
+              Sign In
+            </ReButton>
+            <ReButton href="/login" variant="primary">
+              Sign Up
+            </ReButton>
+      
           </div>
 
           {/* Mobile Hamburger */}
