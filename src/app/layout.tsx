@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Geist } from "next/font/google";
-import NavBar from "../components/shared/NavBar";
+
 import "./globals.css";
+import NavBar from "@/components/shared/Navbar/NavBar";
 
 const helveticaNow = localFont({
   src: [
