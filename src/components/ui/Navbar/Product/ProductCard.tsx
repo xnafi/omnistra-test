@@ -6,7 +6,7 @@ export default function ProductCard({
   badge,
 }: ProductCardProps) {
   return (
-    <div className=" relative rounded-2xl bg-linear-to-b from-white/5 to-white/0 border border-white/10 p-6 h-72 transition-all duration-300 hover:border-white/20 hover:bg-white/5 hover:-translate-y-1 cursor-pointer">
+    <div className="relative rounded-2xl bg-linear-to-b from-white/5 to-white/0 border border-white/10 p-6 h-full lg:h-72 transition-all duration-300 hover:border-white/20 hover:bg-white/5 hover:-translate-y-1 cursor-pointer">
       {/* Radar background */}
       <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] bg-size-[24px_24px]" />
 

@@ -1,10 +1,7 @@
-"use client";
-
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ReButton } from "@/components/re-ui/ReButton";
 import { MobileNavProps } from "@/types/NavTypes";
-import NavLogo from "@/components/ui/Navbar/NavLogo";
 import DotDivider from "@/components/ui/Navbar/MobileMenu/DotDivider";
 import MobileAccordionItem from "@/components/ui/Navbar/MobileMenu/MobileAccordionItem";
 
