@@ -1,5 +1,6 @@
 import { ButtonProps } from "@/types/ButtonType";
-import { ArrowUpRight } from "lucide-react";
+import { RiArrowRightLine } from "react-icons/ri";
+
 import Link from "next/link";
 
 export function ReButton({
@@ -29,9 +30,9 @@ export function ReButton({
         `}
       >
         {children}
-        <ArrowUpRight
+        <RiArrowRightLine
           size={14}
-          className="transition-transform duration-300  group-hover:translate-x-1 group-hover:rotate-45"
+          className="transition-transform duration-300  group-hover:translate-x-1 group-hover:rotate-0 -rotate-45"
         />
       </span>
     </Link>

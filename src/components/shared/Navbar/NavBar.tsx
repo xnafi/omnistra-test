@@ -8,7 +8,8 @@ import NavMenu from "../../ui/Navbar/NavMenu";
 import NavActions from "../../ui/Navbar/NavActions";
 import MegaMenu from "../../ui/Navbar/MegaMenu";
 import { ReButton } from "@/components/re-ui/ReButton";
-import { Menu, X } from "lucide-react";
+import { RiCloseFill, RiMenu4Fill } from "react-icons/ri";
+
 
 const menuItems = [
   "Product",
@@ -101,7 +102,7 @@ export default function NavBar() {
               className="lg:hidden text-white"
               aria-label="Open menu"
             >
-              <Menu size={26} />
+              <RiMenu4Fill size={26} />
             </button>
           </motion.div>
         </motion.nav>
@@ -140,7 +141,7 @@ export default function NavBar() {
                     className="text-white"
                     aria-label="Close menu"
                   >
-                    <X size={26} />
+                    <RiCloseFill size={26} />
                   </button>
                 </div>
 
