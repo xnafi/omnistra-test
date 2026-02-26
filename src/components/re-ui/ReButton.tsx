@@ -8,8 +8,7 @@ export function ReButton({
   variant = "primary",
   className = "",
 }: ButtonProps) {
-  const primary =
-    "bg-[#3448ff] text-white hover:bg-[#2c3be0] transition-colors duration-300";
+  const primary ="bg-[#3448ff] text-white hover:bg-[#2c3be0] transition-colors duration-300";
 
   const dark = "bg-gray-900 text-white transition-colors duration-300";
 
