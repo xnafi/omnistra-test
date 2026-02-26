@@ -42,7 +42,7 @@ export default function MobileAccordionItem({ label }: { label: string }) {
             {isProduct ? (
               <MobileProductMenu />
             ) : (
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-3 mb-4">
                 <a href="#">Sub item 1</a>
                 <a href="#">Sub item 2</a>
                 <a href="#">Sub item 3</a>
