@@ -34,3 +34,9 @@ export interface CompanySidebarCardProps {
   title: string;
   badge?: string;
 }
+
+export interface MobileNavProps {
+  open: boolean;
+  onClose: () => void;
+  menuItems: string[];
+}

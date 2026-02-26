@@ -1,38 +1,43 @@
+"use client";
+
 import { ButtonProps } from "@/types/ButtonType";
 import { RiArrowRightLine } from "react-icons/ri";
-
 import Link from "next/link";
+
+interface ResponsiveButtonProps extends ButtonProps {
+  fullWidth?: boolean;
+}
 
 export function ReButton({
   href,
   children,
   variant = "primary",
   className = "",
-}: ButtonProps) {
-  const primary ="bg-[#3448ff] text-white hover:bg-[#2c3be0] transition-colors duration-300";
+  fullWidth = false,
+}: ResponsiveButtonProps) {
+  const base =
+    "relative inline-flex items-center justify-center rounded-full overflow-hidden animated-border px-[2px] py-[2px]";
 
-  const dark = "bg-gray-900 text-white transition-colors duration-300";
+  const primary =
+    "bg-[#3448ff] text-white hover:bg-[#2c3be0] transition-colors duration-300";
+
+  const dark =
+    "bg-gray-900 text-white hover:bg-gray-800 transition-colors duration-300";
+
+  const widthClass = fullWidth ? "w-full" : "w-fit";
+
+  const variantClass = variant === "primary" ? primary : dark;
 
   return (
-    <Link
-      href={href}
-      className={`relative inline-flex items-center justify-center rounded-full px-0.5 py-0.5 overflow-hidden animated-border ${className}`}
-    >
+    <Link href={href} className={`${base} ${widthClass} ${className}`}>
       <span
-        className={`
-          group
-          relative z-10
-          px-4 py-2
-          rounded-full
-          flex items-center gap-2
-          font-semibold
-          ${variant === "primary" ? primary : dark}
-        `}
+        className={` group relative z-10 flex items-center justify-center gap-2 rounded-full font-semibold px-4 py-2 text-sm sm:px-5 sm:py-2.5 sm:text-base lg:px-6 lg:py-3 ${variantClass}`}
       >
         {children}
+
         <RiArrowRightLine
           size={14}
-          className="transition-transform duration-300  group-hover:translate-x-1 group-hover:rotate-0 -rotate-45"
+          className=" transition-transform duration-300 -rotate-45 group-hover:translate-x-1 group-hover:rotate-0"
         />
       </span>
     </Link>

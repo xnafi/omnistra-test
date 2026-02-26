@@ -2,15 +2,10 @@ import { motion } from "framer-motion";
 
 export default function CompanyFeatureCard() {
   return (
-    <motion.div
-      variants={{
-        hidden: { opacity: 0, y: 20 },
-        show: { opacity: 1, y: 0 },
-      }}
-      transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-      className=" relative overflow-hidden rounded-2xl bg-linear-to-b from-white/6 to-white/2 border border-white/10 p-8 h-full group cursor-pointer hover:-translate-y-1 transition-all duration-500"
-    >
+    <div className=" relative overflow-hidden rounded-2xl bg-linear-to-b from-white/6 to-white/2 border border-white/10 p-8 h-full group cursor-pointer hover:-translate-y-1 transition-all duration-500">
       <h3 className="text-white text-lg font-semibold mb-2">Who We Are</h3>
+      {/* Radar background */}
+      <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] bg-size-[24px_24px]" />
 
       <p className="text-white/60 text-sm max-w-xs">
         The story behind the Chargeflow.
@@ -38,6 +33,6 @@ export default function CompanyFeatureCard() {
 
       {/* Glow */}
       <div className="absolute -bottom-20 -right-20 w-87.5 h-87.5 bg-white/10 blur-3xl rounded-full opacity-30 group-hover:opacity-60 transition duration-500" />
-    </motion.div>
+    </div>
   );
 }

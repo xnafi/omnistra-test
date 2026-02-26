@@ -7,9 +7,8 @@ import NavLogo from "../../ui/Navbar/NavLogo";
 import NavMenu from "../../ui/Navbar/NavMenu";
 import NavActions from "../../ui/Navbar/NavActions";
 import MegaMenu from "../../ui/Navbar/MegaMenu";
-import { ReButton } from "@/components/re-ui/ReButton";
-import { RiCloseFill, RiMenu4Fill } from "react-icons/ri";
-
+import MobileNav from "@/components/ui/Navbar/MobileMenu/MobileNav";
+import MobileToggleButton from "@/components/ui/Navbar/MobileMenu/MobileToggleButton";
 
 const menuItems = [
   "Product",
@@ -97,13 +96,10 @@ export default function NavBar() {
             </div>
 
             {/* Mobile Hamburger */}
-            <button
-              onClick={() => setMobileOpen(true)}
-              className="lg:hidden text-white"
-              aria-label="Open menu"
-            >
-              <RiMenu4Fill size={26} />
-            </button>
+            <MobileToggleButton
+              open={mobileOpen}
+              onClick={() => setMobileOpen((prev) => !prev)}
+            />
           </motion.div>
         </motion.nav>
 
@@ -113,66 +109,11 @@ export default function NavBar() {
         </AnimatePresence>
 
         {/* MOBILE MENU */}
-        <AnimatePresence>
-          {mobileOpen && (
-            <>
-              {/* Backdrop */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
-                onClick={() => setMobileOpen(false)}
-              />
-
-              {/* Slide Panel */}
-              <motion.div
-                initial={{ x: "100%" }}
-                animate={{ x: 0 }}
-                exit={{ x: "100%" }}
-                transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                className="fixed top-0 right-0 h-full w-80 bg-black z-50 p-6 flex flex-col"
-              >
-                {/* Header */}
-                <div className="flex items-center justify-between mb-10">
-                  <span className="text-white font-semibold text-lg">Menu</span>
-                  <button
-                    onClick={() => setMobileOpen(false)}
-                    className="text-white"
-                    aria-label="Close menu"
-                  >
-                    <RiCloseFill size={26} />
-                  </button>
-                </div>
-
-                {/* Links */}
-                <div className="flex flex-col gap-6 text-white uppercase text-sm font-medium">
-                  {menuItems.map((item) => (
-                    <button
-                      key={item}
-                      onClick={() => setMobileOpen(false)}
-                      className="text-left tracking-wide hover:text-white/70 transition"
-                    >
-                      {item}
-                    </button>
-                  ))}
-                </div>
-
-                <div className="flex-1" />
-
-                {/* Actions */}
-                <div className="flex flex-col gap-4">
-                  <ReButton href="/login" variant="dark">
-                    Sign In
-                  </ReButton>
-                  <ReButton href="/login" variant="primary">
-                    Sign Up
-                  </ReButton>
-                </div>
-              </motion.div>
-            </>
-          )}
-        </AnimatePresence>
+        <MobileNav
+          open={mobileOpen}
+          onClose={() => setMobileOpen(false)}
+          menuItems={menuItems}
+        />
       </div>
     </header>
   );
