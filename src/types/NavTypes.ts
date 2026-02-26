@@ -24,3 +24,13 @@ export interface ResourceSidebarCardProps {
   title: string;
   children: React.ReactNode;
 }
+
+export interface CompanyCardProps {
+  title: string;
+  description: string;
+}
+
+export interface CompanySidebarCardProps {
+  title: string;
+  badge?: string;
+}

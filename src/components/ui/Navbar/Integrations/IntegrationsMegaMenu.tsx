@@ -4,18 +4,7 @@ export default function IntegrationsMegaMenu() {
     <div className="grid grid-cols-5 gap-6 items-stretch">
       {/* LEFT LARGE CARD */}
       <div className="col-span-3">
-        <div
-          className="
-          relative overflow-hidden
-          rounded-2xl
-          bg-linear-to-b from-white/6 to-white/2
-          border border-white/10
-          p-8 h-full
-          hover:border-white/20
-          transition-all duration-500
-          group
-        "
-        >
+        <div className=" relative overflow-hidden rounded-2xl bg-linear-to-b from-white/6 to-white/2 border border-white/10 p-8 h-full hover:border-white/20 transition-all duration-500 group hover:-translate-y-1">
           <h3 className="text-white text-lg font-semibold mb-2">
             All Integrations
           </h3>

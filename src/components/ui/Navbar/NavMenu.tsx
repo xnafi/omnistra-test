@@ -14,7 +14,8 @@ export default function NavMenu({ menuItems, setActiveMenu }: NavMenuProps) {
               item === "Product" ||
               item === "Customers" ||
               item === "Integrations" ||
-              item === "Resources"
+              item === "Resources" ||
+              item === "Company"
             ) {
               setActiveMenu(item);
             } else {

@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
-import ProductMegaMenu from "./ProductMegaMenu";
-import CustomersMegaMenu from "./CustomersMegaMenu";
-import IntegrationsMegaMenu from "./IntegrationsMegaMenu";
+import ProductMegaMenu from "./Product/ProductMegaMenu";
+import CustomersMegaMenu from "./Customer/CustomersMegaMenu";
+import IntegrationsMegaMenu from "./Integrations/IntegrationsMegaMenu";
 import { MegaMenuProps } from "@/types/NavTypes";
-import ResourcesMegaMenu from "./ResourcesMegaMenu";
+import ResourcesMegaMenu from "./Resources/ResourcesMegaMenu";
+import CompanyMegaMenu from "./Company/CompanyMegaMenu";
 
 
 export default function MegaMenu({ activeMenu }: MegaMenuProps) {
@@ -22,6 +23,7 @@ export default function MegaMenu({ activeMenu }: MegaMenuProps) {
           {activeMenu === "Customers" && <CustomersMegaMenu />}
           {activeMenu === "Integrations" && <IntegrationsMegaMenu />}
           {activeMenu === "Resources" && <ResourcesMegaMenu />}
+          {activeMenu === "Company" && <CompanyMegaMenu />}
         </div>
       </div>
     </motion.div>
