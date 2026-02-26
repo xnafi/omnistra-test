@@ -19,3 +19,8 @@ export interface ProductCardProps {
   description: string;
   badge?: string;
 }
+
+export interface ResourceSidebarCardProps {
+  title: string;
+  children: React.ReactNode;
+}

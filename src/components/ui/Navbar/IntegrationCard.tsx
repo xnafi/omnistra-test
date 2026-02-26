@@ -1,7 +1,4 @@
-interface IntegrationCardProps {
-  title: string;
-  subtitle: string;
-}
+import { IntegrationCardProps } from "@/types/NavTypes";
 
 export default function IntegrationCard({
   title,

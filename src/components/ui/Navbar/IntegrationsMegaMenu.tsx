@@ -1,10 +1,8 @@
-
-import FloatingDots from "./FloatingDots";
 import IntegrationCard from "./IntegrationCard";
 export default function IntegrationsMegaMenu() {
   return (
     <div className="grid grid-cols-5 gap-6 items-stretch">
-      {/* ===== LEFT LARGE CARD ===== */}
+      {/* LEFT LARGE CARD */}
       <div className="col-span-3">
         <div
           className="
@@ -36,12 +34,12 @@ export default function IntegrationsMegaMenu() {
             </div>
           </div>
 
-          {/* Floating Integration Dots */}
-          <FloatingDots />
+          {/* Radar background */}
+          <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] bg-size-[24px_24px]" />
         </div>
       </div>
 
-      {/* ===== RIGHT SIDE STACKED ===== */}
+      {/* RIGHT SIDE STACKED */}
       <div className="col-span-2 flex flex-col gap-6">
         <IntegrationCard
           title="Stripe"

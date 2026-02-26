@@ -3,6 +3,7 @@ import ProductMegaMenu from "./ProductMegaMenu";
 import CustomersMegaMenu from "./CustomersMegaMenu";
 import IntegrationsMegaMenu from "./IntegrationsMegaMenu";
 import { MegaMenuProps } from "@/types/NavTypes";
+import ResourcesMegaMenu from "./ResourcesMegaMenu";
 
 
 export default function MegaMenu({ activeMenu }: MegaMenuProps) {
@@ -20,6 +21,7 @@ export default function MegaMenu({ activeMenu }: MegaMenuProps) {
           {activeMenu === "Product" && <ProductMegaMenu />}
           {activeMenu === "Customers" && <CustomersMegaMenu />}
           {activeMenu === "Integrations" && <IntegrationsMegaMenu />}
+          {activeMenu === "Resources" && <ResourcesMegaMenu />}
         </div>
       </div>
     </motion.div>

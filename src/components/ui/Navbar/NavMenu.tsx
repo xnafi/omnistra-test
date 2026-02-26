@@ -13,7 +13,8 @@ export default function NavMenu({ menuItems, setActiveMenu }: NavMenuProps) {
             if (
               item === "Product" ||
               item === "Customers" ||
-              item === "Integrations"
+              item === "Integrations" ||
+              item === "Resources"
             ) {
               setActiveMenu(item);
             } else {
