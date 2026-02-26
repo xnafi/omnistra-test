@@ -1,35 +1,37 @@
-import CaseStudyCard from "./CaseStudyCard";
+import CustomersCard from "./CustomersCard";
 
 export default function CustomersMegaMenu() {
   return (
-    <div className="grid grid-cols-5 gap-6">
-      <CaseStudyCard
-        title="All Case Studies"
-        subtitle="Explore success stories"
-      />
+    <div className="grid grid-cols-6 gap-2">
+      <div className="col-span-2">
+        <CustomersCard
+          title="All Case Studies"
+          subtitle="Explore success stories"
+        />
+      </div>
 
-      <CaseStudyCard
+      <CustomersCard
         title="Obvi"
         stat="170%"
         description="Win-rate increase"
         tag="eCommerce"
       />
 
-      <CaseStudyCard
+      <CustomersCard
         title="Elementor"
         stat="90%"
         description="Reduction in time spent managing chargebacks"
         tag="SaaS"
       />
 
-      <CaseStudyCard
+      <CustomersCard
         title="Fanatics"
         stat="2X"
         description="Chargeback Win Rate"
         tag="Marketplace"
       />
 
-      <CaseStudyCard
+      <CustomersCard
         title="Hexclad"
         stat="328"
         description="Hours saved"

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import ProductMegaMenu from "./ProductMegaMenu";
+import CustomersMegaMenu from "./CustomersMegaMenu";
 
 
 interface MegaMenuProps {
@@ -19,6 +20,7 @@ export default function MegaMenu({ activeMenu }: MegaMenuProps) {
       <div className="container">
         <div className="rounded-2xl bg-black/70 backdrop-blur-2xl border border-white/10 shadow-2xl py-4 px-2">
           {activeMenu === "Product" && <ProductMegaMenu />}
+          {activeMenu === "Customers" && <CustomersMegaMenu />}
         </div>
       </div>
     </motion.div>
