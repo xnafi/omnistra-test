@@ -10,7 +10,11 @@ export default function NavMenu({ menuItems, setActiveMenu }: NavMenuProps) {
         <div
           key={item}
           onMouseEnter={() => {
-            if (item === "Product" || item === "Customers") {
+            if (
+              item === "Product" ||
+              item === "Customers" ||
+              item === "Integrations"
+            ) {
               setActiveMenu(item);
             } else {
               setActiveMenu(null);

@@ -5,3 +5,17 @@ export interface CustomersCardProps {
   description?: string;
   tag?: string;
 }
+export interface IntegrationCardProps {
+  title: string;
+  subtitle: string;
+}
+
+export interface MegaMenuProps {
+  activeMenu: string;
+}
+
+export interface ProductCardProps {
+  title: string;
+  description: string;
+  badge?: string;
+}

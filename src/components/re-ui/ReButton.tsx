@@ -11,19 +11,12 @@ export function ReButton({
   const primary =
     "bg-[#3448ff] text-white hover:bg-[#2c3be0] transition-colors duration-300";
 
-  const dark =
-    "bg-gray-900 text-white transition-colors duration-300";
+  const dark = "bg-gray-900 text-white transition-colors duration-300";
 
   return (
     <Link
       href={href}
-      className={`
-        relative inline-flex items-center justify-center
-        rounded-full px-0.5 py-0.5
-        overflow-hidden
-        animated-border
-        ${className}
-      `}
+      className={`relative inline-flex items-center justify-center rounded-full px-0.5 py-0.5 overflow-hidden animated-border ${className}`}
     >
       <span
         className={`

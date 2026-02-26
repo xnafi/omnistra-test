@@ -1,8 +1,4 @@
-interface ProductCardProps {
-  title: string;
-  description: string;
-  badge?: string;
-}
+import { ProductCardProps } from "@/types/NavTypes";
 
 export default function ProductCard({
   title,

@@ -111,7 +111,7 @@ export default function NavBar() {
           {activeMenu && <MegaMenu activeMenu={activeMenu} />}
         </AnimatePresence>
 
-        {/* ================= MOBILE MENU ================= */}
+        {/* MOBILE MENU */}
         <AnimatePresence>
           {mobileOpen && (
             <>
