@@ -7,35 +7,36 @@ export default function CustomersMegaMenu() {
         <CustomersCard
           title="All Case Studies"
           subtitle="Explore success stories"
+          imgSrc="/assets/customer/customer1.svg"
         />
       </div>
 
       <CustomersCard
         title="Obvi"
-        stat="170%"
         description="Win-rate increase"
         tag="eCommerce"
+        imgSrc="/assets/customer/customer2.svg"
       />
 
       <CustomersCard
         title="Elementor"
-        stat="90%"
         description="Reduction in time spent managing chargebacks"
         tag="SaaS"
+        imgSrc="/assets/customer/customer3.jpg"
       />
 
       <CustomersCard
         title="Fanatics"
-        stat="2X"
         description="Chargeback Win Rate"
         tag="Marketplace"
+        imgSrc="/assets/customer/customer4.svg"
       />
 
       <CustomersCard
         title="Hexclad"
-        stat="328"
         description="Hours saved"
         tag="Travel"
+        imgSrc="/assets/customer/customer5.jpg"
       />
     </div>
   );

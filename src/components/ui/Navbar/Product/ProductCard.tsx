@@ -8,7 +8,7 @@ export default function ProductCard({
   imgSrc,
 }: ProductCardProps) {
   return (
-    <div className="relative overflow-hidden group rounded-2xl bg-black border transition-all border-white/10 py-6 px-4 h-full lg:h-72 duration-500 hover:border-white/20 hover:-translate-y-1 cursor-pointer">
+    <div className="relative overflow-hidden group rounded-2xl hover:bg-black bg-black/70 border transition-all border-white/10 py-6 px-4 h-full lg:h-72 duration-500 hover:border-white/20 hover:-translate-y-1 cursor-pointer">
       {/* Background Image */}
       <Image
         src={imgSrc || "/assets/products/default.png"}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { RiArrowDownFill } from "react-icons/ri";
-import MobileProductMenu from "./MobileProductMenu";
+import ProductMegaMenu from "../Product/ProductMegaMenu";
 
 export default function MobileAccordionItem({ label }: { label: string }) {
   const [open, setOpen] = useState(false);
@@ -40,7 +40,7 @@ export default function MobileAccordionItem({ label }: { label: string }) {
             className="overflow-hidden text-sm text-white/60"
           >
             {isProduct ? (
-              <MobileProductMenu />
+              <ProductMegaMenu />
             ) : (
               <div className="flex flex-col gap-3 mb-4">
                 <a href="#">Sub item 1</a>

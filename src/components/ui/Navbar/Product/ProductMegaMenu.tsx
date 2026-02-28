@@ -2,7 +2,7 @@ import ProductCard from "./ProductCard";
 
 export default function ProductMegaMenu() {
   return (
-    <div className="grid grid-cols-5 gap-2">
+    <div className="grid grid-cols-1 lg:grid-cols-5 gap-2 mb-6 lg:mb-0">
       <ProductCard
         title="Prevent"
         badge="NEW"

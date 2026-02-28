@@ -1,9 +1,12 @@
+import { StaticImageData } from "next/image";
+
 export interface CustomersCardProps {
   title: string;
   subtitle?: string;
   stat?: string;
   description?: string;
   tag?: string;
+  imgSrc?: string | StaticImageData;
 }
 export interface IntegrationCardProps {
   title: string;
