@@ -18,6 +18,7 @@ export interface ProductCardProps {
   title: string;
   description: string;
   badge?: string;
+  imgSrc?: string;
 }
 
 export interface ResourceSidebarCardProps {

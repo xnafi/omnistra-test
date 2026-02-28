@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Marquee from "../../ui/Marquee";
+import Marquee from "../../../src/components/ui/Marquee";
 import { motion, AnimatePresence } from "framer-motion";
-import NavLogo from "../../ui/Navbar/NavLogo";
-import NavMenu from "../../ui/Navbar/NavMenu";
-import NavActions from "../../ui/Navbar/NavActions";
-import MegaMenu from "../../ui/Navbar/MegaMenu";
+import NavLogo from "../../../src/components/ui/Navbar/NavLogo";
+import NavMenu from "../../../src/components/ui/Navbar/NavMenu";
+import NavActions from "../../../src/components/ui/Navbar/NavActions";
+import MegaMenu from "../../../src/components/ui/Navbar/MegaMenu";
 import MobileNav from "@/components/ui/Navbar/MobileMenu/MobileNav";
 import MobileToggleButton from "@/components/ui/Navbar/MobileMenu/MobileToggleButton";
 
