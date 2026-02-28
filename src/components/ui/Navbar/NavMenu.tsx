@@ -5,7 +5,7 @@ interface NavMenuProps {
 
 export default function NavMenu({ menuItems, setActiveMenu }: NavMenuProps) {
   return (
-    <div className="hidden lg:flex gap-8 text-xs font-medium uppercase">
+    <div className="hidden lg:flex gap-8 text-xs font-bold uppercase">
       {menuItems.map((item) => (
         <div
           key={item}

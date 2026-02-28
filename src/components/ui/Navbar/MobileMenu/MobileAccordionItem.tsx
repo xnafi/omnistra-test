@@ -19,7 +19,7 @@ export default function MobileAccordionItem({ label }: { label: string }) {
       <div className="border-b border-white/10">
         <Link
           href="/pricing"
-          className="w-full block py-5 text-xs uppercase tracking-wide text-white/80 font-navbar hover:text-white transition"
+          className="w-full block py-5 text-xs font-bold uppercase tracking-wide text-white/80 font-navbar hover:text-white transition"
         >
           {label}
         </Link>
@@ -35,7 +35,7 @@ export default function MobileAccordionItem({ label }: { label: string }) {
         onClick={() => setOpen((prev) => !prev)}
         className="w-full flex items-center justify-between py-5 text-left"
       >
-        <span className="text-xs uppercase tracking-wide text-white/80 font-navbar">
+        <span className="text-xs font-bold uppercase tracking-wide text-white/80 font-navbar">
           {label}
         </span>
 
@@ -64,7 +64,7 @@ export default function MobileAccordionItem({ label }: { label: string }) {
             {isProduct ? (
               <ProductMegaMenu />
             ) : (
-              <div className="flex flex-col gap-3 mb-4 px-1">
+              <div className="flex flex-col gap-3 mb-4 px-1 text-xs font-semibold uppercase tracking-wide">
                 <a href="#">Sub item 1</a>
                 <a href="#">Sub item 2</a>
                 <a href="#">Sub item 3</a>
