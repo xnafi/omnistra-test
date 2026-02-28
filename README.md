@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 # 🧩 Omnistra — Interactive Navigation & Scroll Experience
 
 A modern SaaS-style frontend implementation built with:
-=======
-## Getting Started
->>>>>>> fefe98e67136ef423afb4fa70ee5cf532471f401
 
 - **Next.js (App Router)**
 - **TypeScript**
