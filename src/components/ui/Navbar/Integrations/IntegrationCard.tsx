@@ -1,22 +1,50 @@
+"use client";
+
 import { IntegrationCardProps } from "@/types/NavTypes";
+import Image from "next/image";
 
 export default function IntegrationCard({
   title,
   subtitle,
-}: IntegrationCardProps) {
+  imgSrc,
+  badge,
+}: IntegrationCardProps & {
+  imgSrc?: string;
+  badge?: string;
+}) {
   return (
-    <div className="relative overflow-hidden rounded-2xl bg-linear-to-b from-white/6 to-white/2 border border-white/10 p-6 hover:border-white/20 hover:bg-white/6 transition-all duration-500 group cursor-pointer hover:-translate-y-1">
-      {/* Soft Hover Glow */}
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-white/3" />
+    <div className="relative overflow-hidden group rounded-2xl bg-black/70 border border-white/10 transition-all duration-500 hover:border-white/20 hover:-translate-y-1 hover:bg-black cursor-pointer p-6 h-full lg:h-24">
+      {/* Background Image */}
+      <Image
+        src={imgSrc || "/assets/integrations/default.png"}
+        alt="integration background"
+        fill
+        className="object-cover pointer-events-none w-20 h-20"
+        priority={false}
+      />
 
-      <h4 className="relative text-white font-semibold text-base mb-1">
-        {title}
-      </h4>
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition duration-500" />
 
-      <p className="relative text-white/60 text-sm">{subtitle}</p>
+      {/* Content */}
+      <div className="relative z-10">
+        <div className="flex items-center gap-3 mb-3">
+          <h4 className="text-white font-semibold text-lg">{title}</h4>
 
-      {/* Subtle Background Pattern */}
-      <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] bg-size-[20px_20px]" />
+          {badge && (
+            <span className="text-[8px] bg-white/10 px-2 py-1 rounded-full text-white">
+              {badge}
+            </span>
+          )}
+        </div>
+
+        <p className="text-white/60 text-sm leading-relaxed">{subtitle}</p>
+      </div>
+
+      {/* Hover CTA */}
+      <button className="absolute bottom-4 right-4 text-white/80 hover:text-white text-sm font-medium opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 cursor-pointer">
+        View Integration
+      </button>
     </div>
   );
 }
