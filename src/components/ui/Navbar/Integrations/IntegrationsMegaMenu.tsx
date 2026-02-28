@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from '../../../../../public/assets/CompanyNav/company1.svg';
+import logo from '../../../../../public/1.svg';
 
 
 import IntegrationCard from "./IntegrationCard";
@@ -20,7 +20,7 @@ export default function IntegrationsMegaMenu() {
             src={logo}
             alt="Company image"
             fill
-            className="object-cover pointer-events-none"
+            className="object-cover pointer-events-none opacity-60"
             sizes="(max-width: 1024px) 100vw, 33vw"
             priority={false}
           />

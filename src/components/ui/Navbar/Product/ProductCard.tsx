@@ -33,7 +33,7 @@ export default function ProductCard({
 
         <p className="text-white/60 text-sm leading-relaxed">{description}</p>
       </div>
-
+      {/* Hover CTA */}
       <button className="absolute cursor-pointer bottom-4 right-4 text-white/80 hover:text-white text-sm font-medium opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
         Learn More
       </button>

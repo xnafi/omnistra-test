@@ -5,15 +5,15 @@ import ResourceSidebarCard from "./ResourceSidebarCard";
 export default function ResourcesMegaMenu() {
   return (
     <div className="grid grid-cols-5 gap-6 items-stretch">
-      {/* ===== LEFT 4 CARDS ===== */}
+      {/* LEFT 4 CARDS */}
       <div className="col-span-4 grid grid-cols-4 gap-6">
-        <ResourceCard title="Blog" />
-        <ResourceCard title="Reports" />
-        <ResourceCard title="Podcast" />
-        <ResourceCard title="Webinars" />
+        <ResourceCard title="Blog" imgSrc="/assets/CompanyNav/company2.svg" />
+        <ResourceCard title="Reports" imgSrc="/assets/products/product3.png" />
+        <ResourceCard title="Podcast" imgSrc="/assets/CompanyNav/company1.svg" />
+        <ResourceCard title="Webinars" imgSrc="/assets/products/product1.png" />
       </div>
 
-      {/* ===== RIGHT SIDEBAR ===== */}
+      {/* RIGHT SIDEBAR */}
       <div className="col-span-1 flex flex-col gap-3">
         <ResourceSidebarCard title="ROI Calculator">
           <div className="flex flex-col gap-3">
