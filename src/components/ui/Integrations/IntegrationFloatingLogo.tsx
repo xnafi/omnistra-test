@@ -5,18 +5,15 @@ export default function IntegrationFloatingLogo({
   src,
   x,
   y,
-  rotate,
   scrollProgress,
 }: {
   src: string;
   x: number;
   y: number;
-  rotate: number;
   scrollProgress: MotionValue<number>;
 }) {
   const moveX = useTransform(scrollProgress, [0, 0.55], [x, 0]);
   const moveY = useTransform(scrollProgress, [0, 0.55], [y, 0]);
-  const rotateToCenter = useTransform(scrollProgress, [0, 0.55], [rotate, 0]);
 
   const scale = useTransform(scrollProgress, [0.45, 0.7], [1, 0.4]);
   const opacity = useTransform(scrollProgress, [0.5, 0.75], [1, 0]);
@@ -30,7 +27,6 @@ export default function IntegrationFloatingLogo({
       style={{
         x: moveX,
         y: moveY,
-        rotate: rotateToCenter,
         scale,
         opacity,
         filter: blurFilter,
