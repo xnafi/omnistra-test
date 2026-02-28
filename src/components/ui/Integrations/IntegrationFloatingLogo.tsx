@@ -31,7 +31,7 @@ export default function IntegrationFloatingLogo({
         opacity,
         filter: blurFilter,
       }}
-      className="absolute w-28 h-28 bg-white rounded-2xl shadow-md flex items-center justify-center will-change-transform"
+      className="absolute w-18 h-18 md:w-28 md:h-28 bg-white rounded-2xl shadow-md flex items-center justify-center will-change-transform"
     >
       <Image src={src} alt="" width={70} height={70} />
     </motion.div>
