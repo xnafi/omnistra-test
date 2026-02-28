@@ -18,8 +18,6 @@ export default function IntegrationFloatingLogo({
   const scale = useTransform(scrollProgress, [0.45, 0.7], [1, 0.4]);
   const opacity = useTransform(scrollProgress, [0.5, 0.75], [1, 0]);
   const blur = useTransform(scrollProgress, [0.5, 0.75], [0, 10]);
-
-  // ✅ Correct way
   const blurFilter = useTransform(blur, (v) => `blur(${v}px)`);
 
   return (
@@ -33,7 +31,7 @@ export default function IntegrationFloatingLogo({
       }}
       className="absolute w-18 h-18 md:w-28 md:h-28 bg-white rounded-2xl shadow-md flex items-center justify-center will-change-transform"
     >
-      <Image src={src} alt="" width={70} height={70} />
+      <Image src={src} alt="" width={120} height={120} className="rounded-lg" />
     </motion.div>
   );
 }

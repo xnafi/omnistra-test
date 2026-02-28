@@ -8,35 +8,35 @@ import IntegrationFloatingLogo from "./IntegrationFloatingLogo";
 /* DESKTOP / TABLET LAYOUT */
 
 const desktopLogos = [
-  { src: "/logos/nice.png", x: -0.95, y: -0.45 },
-  { src: "/logos/stripe.png", x: -0.4, y: -0.6 },
-  { src: "/logos/latitude.png", x: 0.95, y: -0.6 },
-  { src: "/logos/elementor.png", x: 0.55, y: -0.45 },
+  { src: "/assets/Integrations/1.svg", x: -0.95, y: -0.45 },
+  { src: "/assets/Integrations/2.svg", x: -0.4, y: -0.6 },
+  { src: "/assets/Integrations/3.svg", x: 0.95, y: -0.6 },
+  { src: "/assets/Integrations/4.svg", x: 0.55, y: -0.45 },
 
-  { src: "/logos/zendesk.png", x: -0.8, y: -0.05 },
-  { src: "/logos/slack.png", x: 0.7, y: 0.0 },
+  { src: "/assets/Integrations/5.svg", x: -0.8, y: -0.05 },
+  { src: "/assets/Integrations/6.svg", x: 0.7, y: 0.0 },
 
-  { src: "/logos/salesforce.png", x: -0.45, y: 0.35 },
+  { src: "/assets/Integrations/7.svg", x: -0.45, y: 0.35 },
 
-  { src: "/logos/hubspot.png", x: -0.9, y: 0.55 },
-  { src: "/logos/fiserv.png", x: 0.4, y: 0.5 },
-  { src: "/logos/shopify.png", x: 1, y: 0.5 },
+  { src: "/assets/Integrations/8.svg", x: -0.9, y: 0.55 },
+  { src: "/assets/Integrations/9.svg", x: 0.4, y: 0.5 },
+  { src: "/assets/Integrations/10.svg", x: 1, y: 0.5 },
 ];
 
 /* MOBILE LAYOUT */
 
 const mobileLogos = [
-  { src: "/logos/nice.png", x: -0.7, y: -1 },
-  { src: "/logos/stripe.png", x: -0.1, y: -1.3 },
-  { src: "/logos/latitude.png", x: 0.7, y: -1 },
-  { src: "/logos/elementor.png", x: 0.1, y: -0.85 },
+  { src: "/assets/Integrations/1.svg", x: -0.7, y: -1 },
+  { src: "/assets/Integrations/2.svg", x: -0.1, y: -1.3 },
+  { src: "/assets/Integrations/3.svg", x: 0.7, y: -1 },
+  { src: "/assets/Integrations/4.svg", x: 0.1, y: -0.85 },
 
-  { src: "/logos/zendesk.png", x: -0.75, y: 0.75 },
-  { src: "/logos/slack.png", x: 0.75, y: 0.75 },
+  { src: "/assets/Integrations/5.svg", x: -0.75, y: 0.75 },
+  { src: "/assets/Integrations/6.svg", x: 0.75, y: 0.75 },
 
-  { src: "/logos/hubspot.png", x: -0.55, y: 1.25 },
-  { src: "/logos/fiserv.png", x: 0.25, y: 0.9 },
-  { src: "/logos/shopify.png", x: 0.7, y: 1.3 },
+  { src: "/assets/Integrations/7.svg", x: -0.55, y: 1.25 },
+  { src: "/assets/Integrations/8.svg", x: 0.25, y: 0.9 },
+  { src: "/assets/Integrations/9.svg", x: 0.7, y: 1.3 },
 ];
 
 export default function IntegrationsLogoCluster({

@@ -22,7 +22,7 @@ export default function IntegrationsHeroSection() {
     <SmoothScrollProvider>
       <section ref={sectionRef} className="relative h-[200vh] font-navbar">
         <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
-          {/* 🔹 BLURRING CONTENT LAYER */}
+          {/* BLURRING CONTENT LAYER */}
           <motion.div
             style={{ filter: blurFilter }}
             className="absolute inset-0 flex items-center justify-center"
@@ -40,7 +40,7 @@ export default function IntegrationsHeroSection() {
             </div>
           </motion.div>
 
-          {/* 🔹 Logos ABOVE blur layer */}
+          {/* Logos ABOVE blur layer */}
           <IntegrationsLogoCluster scrollProgress={scrollYProgress} />
         </div>
       </section>

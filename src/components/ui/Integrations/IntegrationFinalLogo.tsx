@@ -1,5 +1,6 @@
 import { motion, useTransform, MotionValue } from "framer-motion";
 import Image from "next/image";
+import logo from '../../../../public/assets/logo-2.png';
 
 export default function IntegrationFinalLogo({
   scrollProgress,
@@ -13,13 +14,14 @@ export default function IntegrationFinalLogo({
   return (
     <motion.div
       style={{ opacity, scale, rotate }}
-      className="absolute w-40 h-40 bg-blue-600 rounded-2xl flex items-center justify-center shadow-xl z-30"
+      className="absolute w-20 h-20 md:w-30 md:h-30 bg-blue-600 rounded-2xl flex items-center justify-center shadow-xl z-30"
     >
       <Image
-        src="/logos/main-logo.png"
+        src={logo}
         alt="Final Logo"
-        width={110}
-        height={110}
+        width={50}
+        height={50}
+        className="lg:h-20 lg:w-20"
       />
     </motion.div>
   );
