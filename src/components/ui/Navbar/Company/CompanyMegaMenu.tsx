@@ -21,11 +21,18 @@ export default function CompanyMegaMenu() {
         <CompanyFeatureCard />
       </div>
 
-      <div className="col-span-2 grid grid-cols-2 gap-6">
-        <CompanySideCard title="Brand" />
-        <CompanySideCard title="Careers" badge="We're Hiring!" />
-        <CompanySideCard title="Become a Partner" />
-        <CompanySideCard title="Contact Us" />
+      <div className="col-span-2 grid grid-cols-2 gap-2">
+        <CompanySideCard
+          imgSrc="/assets/CompanyNav/company1.svg"
+          title="Brand"
+        />
+        <CompanySideCard
+          imgSrc="/assets/CompanyNav/company2.svg"
+          title="Careers"
+          badge="We're Hiring!"
+        />
+        <CompanySideCard imgSrc="/assets/CompanyNav/company3.svg" title="Become a Partner" />
+        <CompanySideCard imgSrc="/assets/CompanyNav/company4.svg" title="Contact Us" />
       </div>
     </motion.div>
   );

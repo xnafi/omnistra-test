@@ -1,11 +1,33 @@
+"use client";
+
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { RiArrowDownFill } from "react-icons/ri";
 import ProductMegaMenu from "../Product/ProductMegaMenu";
+import Link from "next/link";
 
 export default function MobileAccordionItem({ label }: { label: string }) {
   const [open, setOpen] = useState(false);
+
   const isProduct = label === "Product";
+  const hasSubmenu = label !== "Pricing";
+
+  /* PRICING (No submenu) */
+
+  if (!hasSubmenu) {
+    return (
+      <div className="border-b border-white/10">
+        <Link
+          href="/pricing"
+          className="w-full block py-5 text-xs uppercase tracking-wide text-white/80 font-navbar hover:text-white transition"
+        >
+          {label}
+        </Link>
+      </div>
+    );
+  }
+
+  /* DEFAULT ACCORDION */
 
   return (
     <div className="border-b border-white/10">
@@ -35,14 +57,14 @@ export default function MobileAccordionItem({ label }: { label: string }) {
             exit={{ height: 0, opacity: 0 }}
             transition={{
               height: { duration: 0.35, ease: "easeInOut" },
-              opacity: { duration: 0.8 },
+              opacity: { duration: 0.25 },
             }}
             className="overflow-hidden text-sm text-white/60"
           >
             {isProduct ? (
               <ProductMegaMenu />
             ) : (
-              <div className="flex flex-col gap-3 mb-4">
+              <div className="flex flex-col gap-3 mb-4 px-1">
                 <a href="#">Sub item 1</a>
                 <a href="#">Sub item 2</a>
                 <a href="#">Sub item 3</a>

@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import { Geist } from "next/font/google";
 
 import "./globals.css";
-import NavBar from "../../public/assets/products/NavBar";
+import NavBar from "../components/shared/Navbar/NavBar";
 
 const helveticaNow = localFont({
   src: [
