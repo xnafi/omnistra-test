@@ -7,3 +7,10 @@ export interface LenisOptions {
   touchMultiplier?: number;
   infinite?: boolean;
 }
+export interface IntegrationItem {
+  id: string;
+  logo: string;
+  angle: number; // degrees
+  radius: number; // px
+  animationDelay?: number;
+}

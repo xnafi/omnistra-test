@@ -1,4 +1,5 @@
-import { IntegrationsHeroSection } from "@/components/ui/Integrations/IntegrationsSection";
+import IntegrationsHeroSection from "@/components/ui/Integrations/IntegrationsSection";
+
 
 
 

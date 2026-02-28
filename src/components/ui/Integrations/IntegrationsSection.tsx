@@ -1,49 +1,49 @@
 "use client";
 
-import { ReButton } from "@/components/re-ui/ReButton";
-import SmoothScrollProvider from "@/utils/SmoothScrollProvider";
-import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { useScroll, useTransform, motion } from "framer-motion";
+import SmoothScrollProvider from "@/utils/SmoothScrollProvider";
+import IntegrationsLogoCluster from "./IntegrationsLogoCluster";
+import { ReButton } from "@/components/re-ui/ReButton";
 
-export const IntegrationsHeroSection = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
+export default function IntegrationsHeroSection() {
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "center center"],
+    target: sectionRef,
+    offset: ["start start", "end end"],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
-  const y = useTransform(scrollYProgress, [0, 1], [80, 0]);
+  // Blur background AFTER collapse
+  const bgBlur = useTransform(scrollYProgress, [0.65, 0.85], [0, 20]);
+  const blurFilter = useTransform(bgBlur, (v) => `blur(${v}px)`);
 
   return (
     <SmoothScrollProvider>
-      <section
-        ref={containerRef}
-        className="relative min-h-screen font-navbar flex items-center justify-center overflow-hidden"
-      >
-        {/* Background Orbit Lines */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute w-175 h-175 border-gray-300 opacity-40 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+      <section ref={sectionRef} className="relative h-[200vh] font-navbar">
+        <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+          {/* 🔹 BLURRING CONTENT LAYER */}
+          <motion.div
+            style={{ filter: blurFilter }}
+            className="absolute inset-0 flex items-center justify-center"
+          >
+            <div className="text-center">
+              <h1 className="text-5xl font-semibold text-white">
+                One platform,
+                <br />
+                unlimited integrations
+              </h1>
+
+              <ReButton href="" className="mt-6">
+                Explore Integrations
+              </ReButton>
+            </div>
+          </motion.div>
+
+          {/* 🔹 Logos ABOVE blur layer */}
+          <IntegrationsLogoCluster scrollProgress={scrollYProgress} />
         </div>
-
-        {/* Center Content */}
-        <motion.div
-          style={{ scale, opacity, y }}
-          className="relative z-10 text-center max-w-2xl"
-        >
-          <h1 className="text-5xl font-semibold text-white leading-tight">
-            One platform,
-            <br />
-            unlimited integrations
-          </h1>
-
-          <ReButton href="" className="mt-5">
-            Explore Integrations
-          </ReButton>
-        </motion.div>
       </section>
     </SmoothScrollProvider>
   );
-};
+}
